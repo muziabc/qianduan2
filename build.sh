@@ -1,8 +1,8 @@
-#!/bin/bash
-cd `dirname $0`
+#!/bin/sh
+yarn stdver
 
-npm install yarn -g
-yarn
 yarn build
 
-tar -cf $APP_NAME-v$VERSION.zip ./dist
+git remote add github https://$GITHUB_TOKEN@github.com/levy9527/nuxt-element-dashboard.git > /dev/null 2>&1
+git push github HEAD:master --follow-tags
+
