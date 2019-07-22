@@ -14,5 +14,5 @@ yarn --frozen-lockfile && yarn build
 
 echo "压缩项目"
 cd dist
-tar -cf $APP_NAME-v$VERSION.tar.gz .
+tar -czf ../$APP_NAME-v$VERSION.tar.gz .
 cd ..
